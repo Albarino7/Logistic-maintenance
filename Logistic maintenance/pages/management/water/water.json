@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-card": "@vant/weapp/card/index"
+  },
+  "navigationBarTitleText": "水工",
+  "navigationBarBackgroundColor": "#1D7BD2",
+  "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,34 @@
+<!-- index.wxml -->
+<van-toast id="van-toast" />
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" circular="true">
+  <block wx:for="{{imgUrls}}" wx:key="{{item.i}}">
+    <swiper-item>
+      <image src="{{item}}" style="width:100%;height:100%;"/>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="kind-list-item-bd kind-list-item-bd-show">
+  <view class="navigator-box navigator-box-show">
+    <view class="navigator">
+      <view wx:for-items="{{arr1}}" wx:key="item.id" class="viewcla" bindtap="kindToggle" id="{{item.txt}}" hover-class="viewhover1">
+          <image class="imgcla" src="{{item.imgurl}}"></image>
+          <view class="txtcla">{{item.txt}}</view>
+        </view>
+    </view>
+  </view>
+</view>
+
+<view class="kind-list-item-bd kind-list-item-bd-show">
+  <view class="navigator-box navigator-box-show">
+    <view class="navigator">
+      <view wx:for-items="{{arr2}}" wx:key="item.id" class="viewcla" bindtap="kindToggle" id="{{item.txt}}" hover-class="viewhover1">
+          <image class="imgcla" src="{{item.imgurl}}"></image>
+          <view class="txtcla">{{item.txt}}</view>
+        </view>
+    </view>
+  </view>
+</view>
+
+
+

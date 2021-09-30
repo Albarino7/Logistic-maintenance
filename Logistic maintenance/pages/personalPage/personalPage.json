@@ -1,0 +1,13 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-divider": "@vant/weapp/divider/index"
+  },
+  
+  "navigationBarTitleText": "个人主页",
+  "navigationBarBackgroundColor": "#1D7BD2",
+  "navigationBarTextStyle": "white"
+}

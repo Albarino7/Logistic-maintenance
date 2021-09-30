@@ -1,0 +1,17 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-rate": "@vant/weapp/rate/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-steps": "@vant/weapp/steps/index"
+  },
+  "navigationBarBackgroundColor": "#1D7BD2",
+  "navigationBarTitleText": "维修进度",
+  "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,80 @@
+<!--pages/bxDetail/bxDetail.wxml-->
+<van-toast id="van-toast"/>
+
+<van-cell-group wx:if="{{ u_id === 'student'}}">
+    <van-field
+        value="{{ u_number }}"
+        left-icon="contact" 
+        label="我的学号："
+        readonly="true"
+      />
+      <van-field 
+      label="标题："
+      placeholder="请输入留言题目"
+      value="{{ s_label }}"
+      border="{{ false }}"
+      bind:input="onInput_1"
+      clearable/>
+    <van-field
+        placeholder="请输入您的留言："
+        center
+        value="{{ message }}"
+        type="textarea"
+        border="{{ false }}"
+        use-button-slot
+        clearable
+        bind:input="onInput_2"
+        autosize="true">
+       <van-button color="#1D7BD2" slot="button" size="small"
+        plain round bind:click="submit">提交留言</van-button>
+    </van-field>   
+</van-cell-group>
+
+<van-cell-group wx:else>
+    <van-field
+        value="{{ u_number }}"
+        label="工号："
+        readonly="true"
+      />  
+</van-cell-group>
+
+<view wx:for="{{s_message}}" wx:key="_id" >
+    <van-card 
+          title="{{'标题：'+item.lable}}"
+          desc="{{'留言人：'+item.number}}"
+          thumb="../../images/leave_m.png">
+        <view slot="price-top">
+          <text>主要内容：{{item.message}}
+          发表时间：{{item.time}}</text>
+          <text wx:if="{{ item.back_m.length>0 }}">
+          回复人：{{u_number}}
+          回复内容：{{item.back_m}}</text>   
+        </view>
+        <view slot="footer">
+          <van-button color="#1D7BD2" slot="button" size="mini" id="{{item._id}}"
+          data-text="{{item.number}}" plain round bind:click="reback">
+          回复</van-button> 
+          <van-button type="danger" slot="button" size="mini" id="{{item._id}}"
+          data-text="{{item.number}}" plain round bind:click="delete_m">
+          删除</van-button> 
+        </view>
+    </van-card>
+</view>
+
+<van-popup show="{{ show_1 }}" position="bottom" custom-style="height: 30%" bind:close="onClose_1" > 
+
+<van-cell-group>
+  <van-field
+    label="我要回复："
+    type="textarea"
+    clearable
+    value="{{ back_m }}"
+    autosize="{{true}}"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+  <van-button block color="#1D7BD2" bind:click="onConform" >确认 </van-button>
+<van-button block type="default" bind:click="onClose_1">取消</van-button>
+</van-cell-group>
+
+</van-popup>

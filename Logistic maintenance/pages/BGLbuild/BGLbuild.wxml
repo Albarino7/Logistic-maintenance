@@ -1,0 +1,168 @@
+<van-toast id="van-toast" />
+<van-cell-group>
+  <van-field
+    value="{{u_number}}"
+    label="工号："
+    left-icon="contact"
+    disabled
+    readonly="{{true}}"
+  />
+  <van-field
+    value="{{ name }}"
+    label="姓名:"
+    required
+    readonly="{{true}}"
+    icon="question-o"
+    bind:click-icon="onClickIcon"
+  />
+  
+  <van-dialog 
+  id="van-dialog"
+  show="{{ show_0 }}" 
+  bind:close="onClose_0">
+  </van-dialog>
+
+
+  <van-field
+    value="{{ phone }}"
+    label="手机号:"
+    required
+    readonly="{{true}}"
+  />
+
+  <van-field
+    bindtap="showPopup_1"
+    value="{{ build }}"
+    label="办公楼:"
+    placeholder="选择您要报修的办公楼"
+    required
+  />
+
+   <van-popup 
+    show="{{ show_1 }}"
+    position="bottom"
+    custom-style="height: 40%"
+    bind:close="onClose_1">
+
+    <van-picker 
+    columns="{{ columns_1 }}" 
+    bind:change="onChange_1" 
+    show-toolbar
+    title="选择办公楼"
+    bind:confirm="onConfirm_1"
+    bind:cancel="onCancel_1"
+    />
+    </van-popup>
+
+
+  <van-field
+    bindtap="showPopup_2"
+    value="{{ fault }}"
+    label="选择故障:"
+    placeholder="选择您要报修故障种类"
+    required
+  />
+   <van-popup 
+    show="{{ show_2 }}"
+    position="bottom"
+    custom-style="height: 40%"
+    bind:close="onClose_2">
+
+    <van-picker 
+    columns="{{ columns_2 }}" 
+    bind:change="onChange_2" 
+    show-toolbar
+    title="选择故障种类"
+    bind:confirm="onConfirm_2"
+    bind:cancel="onCancel_2"
+    />
+    </van-popup>
+
+    <van-field
+    value="{{ fault_d }}"
+    label="简述问题:"
+    type="textarea"
+    placeholder="请描述故障细节"
+    bind:input="detialInput"
+    autosize
+    required
+    clearable
+    
+  />
+
+  <van-field
+    bindtap="showPopup_3"
+    value="{{ c_date }}"
+    label="预约日期:"
+    placeholder="选择您要预约的维修日期"
+    required
+  />
+   <van-popup 
+    show="{{ show_3 }}"
+    position="bottom"
+    custom-style="height: 40%"
+    bind:close="onClose_3">
+
+    <van-datetime-picker
+    type="date"
+    value="{{ currentDate_1 }}"
+    min-date="{{ minDate }}"
+    bind:input="onInput_3"
+    bind:confirm="onConfirm_3"
+    bind:cancel="onCancel_3"
+    formatter="{{ formatter_1 }}"
+    />
+    </van-popup>
+
+    <van-field
+    bindtap="showPopup_4"
+    value="{{ c_time }}"
+    label="预约时间:"
+    placeholder="选择您要预约的维修时间"
+    required
+  />
+   <van-popup 
+    show="{{ show_4 }}"
+    position="bottom"
+    custom-style="height: 40%"
+    bind:close="onClose_4">
+
+    <van-datetime-picker
+    type="time"
+    value="{{ currentDate_2 }}"
+    min-hour="{{ minHour }}"
+    max-hour="{{ maxHour }}"
+    bind:input="onInput_4"
+    bind:confirm="onConfirm_4"
+    bind:cancel="onCancel_4"
+    />
+    </van-popup>
+    <van-field
+      label="上传图片:"
+      placeholder="请上传图片帮助我们解决问题"
+      disabled>
+      </van-field>
+
+  <view class="img_box">
+    <view class="imgs" wx:for="{{tempFilePaths}}" wx:key="index">
+      <image src="{{ item }}" bindlongpress="DeleteImg" bindtap="PreviewImg" data-index="{{index}}" mode='widthFix' />
+    </view>
+    <view class="imgs">
+      <view class="images" bindtap="ChooseImg">
+        <!--这里自行创建image文件夹，并添加choose.png，及中部加号-->
+        <image src='/images/camera.png' />
+      </view>
+    </view>
+  </view>
+  <!--以下为上传按钮，可自行借鉴-->
+  <van-button 
+  color="#1D7BD2"
+  round
+  block="true"
+  bind:click="UploadBtntap">提交报修单</van-button>
+</van-cell-group>
+  
+
+  
+
+    

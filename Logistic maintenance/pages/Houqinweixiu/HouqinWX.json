@@ -1,0 +1,19 @@
+{
+  "component":true,
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-button":"@vant/weapp/button/index"
+    },   
+  "navigationBarTitleText": "后勤维修",
+  "navigationBarBackgroundColor": "#1D7BD2",
+  "navigationBarTextStyle": "white"
+  
+}

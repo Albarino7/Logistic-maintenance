@@ -1,0 +1,8 @@
+<!--pages/shuju/shuju.wxml-->
+<van-toast id="van-toast"/>
+<van-notice-bar
+  left-icon="volume-o"
+  text="请工人管理员选择用户数据文件上传。"
+/>
+<van-button icon="/images/cloud.png" round block color="#1D7BD2"
+bind:click="chooseExcel" >上传数据</van-button>

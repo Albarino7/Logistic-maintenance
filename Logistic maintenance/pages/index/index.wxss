@@ -1,0 +1,67 @@
+/**index.wxss**/
+@import "../../utils/index.wxss";
+@import "../../utils/weui.wxss";
+
+/*page {
+  background-color: #fff;
+}*/
+
+/*.txtcla {
+  padding: 0 8px;
+}*/
+
+.txtcla {
+  font-size: 30rpx;
+  font-weight: 900;
+  /* text-shadow: 2rpx 2rpx 0 #ccc,
+                 4rpx 4rpx 0 #ccc,
+                 6rpx 6rpx 0 #444,
+                 8rpx 8rpx 0 #444,
+                 10rpx 10rpx 0 #444,
+                 12rpx 12rpx 0 #444;
+  transform: scale(1.2);
+  transition: all 0.12s ease-out; */
+}
+
+.imgcla {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.viewcla {
+  position: relative;
+  display: block;
+  width: 18%;
+  padding: 0 18rpx;
+  text-align: center;
+}
+
+.imgcla1 { 
+  float: left;
+  width: 136rpx;
+  height: 94rpx;
+}
+
+.news-item {
+  padding-left: 16rpx;
+  padding-top: 16rpx;
+  padding-right: 16rpx;
+  padding-bottom: 16rpx;
+  margin-left: 16rpx;
+  margin-right: 16rpx;
+  margin-top: 16rpx;
+  background-color: #fff;
+  border: 2rpx solid #eaeaea;
+  border-bottom: 2rpx solid #d0d0d0;
+  border-radius: 10rpx;
+}
+
+.kind-list-img {
+  width: auto;
+  height: auto;
+}
+
+.navigator {
+  justify-content: space-around;
+  height: 100px;
+}

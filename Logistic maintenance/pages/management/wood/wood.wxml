@@ -1,0 +1,14 @@
+<!--pages/wood/wood.wxml-->
+<view wx:for="{{work}}" wx:key="_id">
+        <van-card 
+          title="{{'工号：'+item.number}}"
+          desc="{{'姓名：'+item.name}}"
+          thumb="/images/more/tree.png">
+          <view slot="price-top">
+            <text decode="{{true}}" space="{{true}}">手机号：{{item.phone_n}}
+              工种：{{item.type}}
+            </text>   
+          </view>
+        </van-card>
+    </view>
+

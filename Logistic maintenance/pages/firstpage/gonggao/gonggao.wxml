@@ -1,0 +1,56 @@
+<!--pages/about/about.wxml-->
+<van-toast id="van-toast"/>
+
+<van-cell-group wx:if="{{ u_id === 'S_manager'}}">
+    <van-field 
+      label="我要公告："
+      placeholder="请输入公告标题"
+      value="{{ m_label }}"
+      border="{{ false }}"
+      bind:input="onInput_1"
+      clearable/>
+    <van-field
+        placeholder="请输入公告内容："
+        center
+        value="{{ message }}"
+        type="textarea"
+        border="{{ false }}"
+        use-button-slot
+        clearable
+        bind:input="onInput_2"
+        autosize="true">
+       <van-button color="#1D7BD2" slot="button" size="small"
+        plain round bind:click="submit">提交公告</van-button>
+    </van-field>   
+</van-cell-group>
+
+<van-cell-group wx:else>
+     <van-field
+        value="{{ u_number }}"
+        left-icon="contact" 
+        label="学/工号："
+        readonly="true"
+      />
+</van-cell-group>
+
+  <view wx:for="{{m_message}}" wx:key="_id" >
+    <van-card 
+          title="{{'标题：'+item.lable}}"
+          desc="{{'主要内容：'+item.message}}"
+          thumb="/images/message.png">
+        <view slot="price-top">
+          <text>发表人：{{item.u_number}}
+          发表时间：{{item.time}}</text>   
+        </view>
+        <view slot="footer">
+          <van-button type="danger" slot="button" size="mini" id="{{item._id}}" data-num="{{item.u_number}}"
+        plain round bind:click="delete_m">删除</van-button>  
+        </view>
+    </van-card>
+  </view>
+
+
+
+   
+ 
+

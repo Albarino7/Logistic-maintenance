@@ -1,0 +1,41 @@
+<!--pages/my_history/my_history.wxml-->
+<view wx:if="{{ u_id === 'worker' }}">
+  <view wx:for="{{repair1}}" wx:key="_id">
+  <van-card 
+        title="{{'故障：'+item.fault}}"
+        desc="{{'细节：'+item.fault_detial}}">
+      <view slot="price-top">
+          <text decode="{{true}}" space="{{true}}">姓名：{{item.realName}}&emsp;学号：{{item.usernumber}}
+              手机号：{{item.phone}}
+              地址：{{item.build}}-{{item.buildN}}
+              预约时间：{{item.res_date}}-{{item.res_time}}
+              审核人：{{item.w_manager}}
+              评分：{{item.star}}
+              评价：{{item.comment}}
+          </text>   
+      </view>
+  </van-card>
+    <van-divider />
+  </view>
+</view>
+
+<view wx:else>
+  <view wx:for="{{repair2}}" wx:key="_id">
+  <van-card 
+        title="{{'故障：'+item.fault}}"
+        desc="{{'细节：'+item.fault_detial}}">
+      <view slot="price-top">
+          <text decode="{{true}}" space="{{true}}">姓名：{{item.realName}}&emsp;学号：{{item.usernumber}}
+              手机号：{{item.phone}}
+              地址：{{item.build}}-{{item.buildN}}
+              预约时间：{{item.res_date}}-{{item.res_time}}
+              审核人：{{item.w_manager}}
+              评分：{{item.star}}
+              评价：{{item.comment}}
+          </text>   
+      </view>
+  </van-card>
+    <van-divider />
+  </view>
+</view>
+

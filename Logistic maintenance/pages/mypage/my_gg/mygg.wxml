@@ -1,0 +1,16 @@
+<!--pages/my_gg/mygg.wxml-->
+<van-toast id="van-toast" />
+<view wx:for="{{m_message}}" wx:key="time" >
+    <van-card 
+          title="{{'标题：'+item.lable}}"
+          desc="{{'主要内容：'+item.message}}"
+          thumb="/images/message.png">
+        <view slot="price-top">
+          <text>发表时间：{{item.time}}</text>   
+        </view>
+        <view slot="footer">
+          <van-button type="danger" slot="button" size="mini" id="{{item._id}}"
+        plain round bind:click="delete_m">删除</van-button>  
+        </view>
+    </van-card>
+</view>

@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/Houqinweixiu/HouqinWX",
+    "pages/personalPage/personalPage",
+    "pages/firstpage/lvhua/lvhua",
+    "pages/firstpage/shuju/shuju",
+    "pages/firstpage/studentM/studentM",
+    "pages/firstpage/jindu/jindu",
+    "pages/firstpage/gonggao/gonggao",
+    "pages/susheWx/susheWx",
+
+    "pages/mypage/my_history/my_history",
+    "pages/mypage/leaveM/leaveM",
+    "pages/mypage/my_gg/mygg",
+    "pages/mypage/kefu/kefu",
+    "pages/mypage/my_wx/my_wx",
+
+    "pages/teacherBuild/teacherBuild",
+    "pages/JXbuild/JXbuild",
+    "pages/BGLbuild/BGLbuild",
+    "pages/QTbuild/QTbuid",
+   
+    "pages/management/water/water",
+    "pages/management/wood/wood",
+    "pages/management/electric/electric",
+    "pages/management/other/other"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon/index.png",
+        "selectedIconPath": "/images/icon/index1.png"
+      },
+      {
+        "pagePath": "pages/Houqinweixiu/HouqinWX",
+        "text": "后勤维修",
+        "iconPath": "/images/icon/baoxiu.png",
+        "selectedIconPath": "/images/icon/baoxiu_H.png"
+      },
+      {
+        "pagePath": "pages/personalPage/personalPage",
+        "text": "我的",
+        "iconPath": "/images/icon/Me.png",
+        "selectedIconPath": "/images/icon/Me1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

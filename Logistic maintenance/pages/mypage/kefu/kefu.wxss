@@ -1,0 +1,22 @@
+/* pages/kefu/kefu.wxss */
+
+image {
+  height: 450rpx;
+}
+
+swiper {
+  height: 450rpx;
+}
+.kefu-text{
+	padding: 40rpx;
+  text-align: left;
+}
+.phone{
+  color: black;
+}
+
+.kefu-text text{
+	display: block;
+	color: #888;
+	font-size: 40rpx;
+}

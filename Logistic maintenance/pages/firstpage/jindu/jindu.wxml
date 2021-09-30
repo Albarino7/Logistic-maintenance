@@ -1,0 +1,70 @@
+<!--pages/jindu/jindu.wxml-->
+<van-toast id="van-toast"/>
+
+<view>
+      <van-field
+        value="{{ u_number }}"
+        left-icon="contact" 
+        label="学/工号："
+        readonly="true"
+      />
+      <view wx:for="{{progress}}" wx:key="_id">
+      <van-field
+        label="报修地址："
+          value="{{ item.build }}"
+          readonly="true"
+          border="{{false}}"/>
+        <van-field
+        label="报修内容："
+          value="{{ item.fault }}"
+          readonly="true"
+          border="{{false}}"/>
+        <van-steps 
+          steps="{{ steps }}"
+          active="{{ item.action }}"
+          active-color="#1D7BD2"/>
+
+          <view wx:if ="{{ item.comment.length>0 }}">
+          <van-field 
+              label="我的评价："
+                value="{{ item.star+'分-'+item.comment }}"
+                readonly="true"
+                border="{{false}}"/>
+          </view>
+              
+         <view wx:elif="{{ item.reject_reason.length>0 }}" >
+         <van-field 
+              label="拒绝理由："
+                value="{{ item.reject_reason }}"
+                readonly="true"/>
+         </view>
+            <van-cell>
+              <van-button round color="#1D7BD2" size="small" bind:click="result_c" 
+              id="{{item._id}}" data-act="{{ item.action }}">我要写评价</van-button>
+              </van-cell>
+              <van-divider />
+      </view>
+
+<van-popup show="{{ show_1 }}" position="bottom" custom-style="height: 40%" bind:close="onClose_1" > 
+  <van-cell-group>
+    <van-cell border="{{ false }}">
+        <van-rate value="{{ star }}" size="{{ 23 }}" allow-half
+        color="#1D7BD2"
+        void-color="#d6ecf0"
+        void-icon="star" bind:change="onChange_1" />
+    </van-cell>
+    <van-field
+        label="我要评价："
+        type="textarea"
+        clearable
+        value="{{ comment }}"
+        autosize="{{true}}"
+        border="{{ false }}"
+        bind:change="onChange_2"
+      />
+    <van-button block color="#1D7BD2" bind:click="onConform">确认 </van-button>
+    <van-button block type="default" bind:click="onClose_1">取消</van-button>
+  </van-cell-group>
+</van-popup>
+
+</view>

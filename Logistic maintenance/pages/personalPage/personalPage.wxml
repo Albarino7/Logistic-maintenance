@@ -1,0 +1,33 @@
+
+<view class="user_info">
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <open-data  type="userAvatarUrl"></open-data>
+    </view>
+      <text class="edit">个人主页</text>
+      <view class="name">
+      学号/工号：<text>{{number}}</text>
+      </view>
+  </view>
+</view>
+<van-divider hairline />
+<van-cell-group wx:if="{{ u_id === 'student'}}"> 
+  <van-cell title="报修记录" size="large" icon="orders-o" bind:click='tap1'	/>
+  <van-cell title="我的留言" size="large" icon="edit" bind:click='tap3'/>
+  <van-cell title="联系客服" size="large" icon="phone-circle-o" bind:click='tap5'/>
+</van-cell-group>
+
+<van-cell-group wx:elif="{{ u_id === 'S_manager'}}"> 
+  <van-cell title="我的公告" size="large" icon="notes-o" bind:click='tap4' />
+</van-cell-group>
+
+<van-cell-group wx:elif="{{ u_id === 'teacher'}}"> 
+  <van-cell title="报修记录" size="large" icon="orders-o" bind:click='tap1'	/>
+  <van-cell title="联系客服" size="large" icon="phone-circle-o" bind:click='tap5'/>
+</van-cell-group>
+
+<van-cell-group wx:elif="{{ u_id === 'worker'}}"> 
+  <van-cell title="我的维修" size="large" icon="brush-o" bind:click='tap6'	/>
+  <van-cell title="维修记录" size="large" icon="todo-list-o" bind:click='tap1'/>
+</van-cell-group>
+

@@ -1,0 +1,15 @@
+{
+    "component": true,
+    "usingComponents": {
+      "van-button": "@vant/weapp/button/index",
+      "van-row": "@vant/weapp/row/index",
+      "van-col": "@vant/weapp/col/index",
+      "van-nav-bar": "@vant/weapp/nav-bar/index",
+      "van-toast": "@vant/weapp/toast/index",
+      "van-cell": "@vant/weapp/cell/index",
+      "van-cell-group": "@vant/weapp/cell-group/index"
+    },
+    "navigationBarBackgroundColor": "#1D7BD2",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "绿化公示"
+}

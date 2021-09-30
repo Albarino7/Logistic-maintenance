@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-button": "@vant/weapp/button/index"
+  },
+  "navigationBarBackgroundColor": "#1D7BD2",
+"navigationBarTextStyle": "white",
+"navigationBarTitleText": "数据上传"}

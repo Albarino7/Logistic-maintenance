@@ -1,0 +1,186 @@
+<van-toast id="van-toast"/>
+
+<van-tabs bind:disabled="onClickDisabled" color="#1D7BD2" border="true">
+<!--我要报修设备标签页-->
+<view>
+  <van-tab title="我要报修设备">
+    <van-cell-group inset>
+      <van-cell size="large" icon="/images/fix/apartment.png" title="宿舍报修" 
+      is-link bind:click="tap_1"/>
+      <van-cell size="large" icon="/images/fix/family_b.png" title="家属院报修" 
+      is-link bind:click="tap_2" />
+      <van-cell size="large" icon="/images/fix/teaching_b.png" title="教学楼报修" 
+      is-link bind:click="tap_3" />
+      <van-cell size="large" icon="/images/fix/work_b.png" title="办公楼报修" 
+      is-link bind:click="tap_4" />
+      <van-cell size="large" icon="/images/fix/building.png" title="其他建筑报修" 
+      is-link bind:click="tap_5"/>
+    </van-cell-group>
+  </van-tab>
+</view>
+
+<!--维修项目审核标签页-->
+<view>
+  <van-tab wx:if="{{ u_id === 'W_manager'}}" title="维修项目审核">
+
+    <view wx:for="{{s_ser}}" wx:key="_id">
+      <van-card 
+        title="{{'故障：'+item.fault}}"
+        desc="{{'细节：'+item.fault_detial}}"
+        thumb="/images/fix/apartment.png">
+        <view slot="price-top">
+          <text decode="{{true}}" space="{{true}}">姓名：{{item.realName}}&emsp;学号：{{item.usernumber}}
+              手机号：{{item.phone}}
+              地址：{{item.build+item.buildN}}
+              预约时间：{{item.res_date}}-{{item.res_time}}
+          </text>   
+        </view>
+        <view slot="footer">
+          <van-button round color="#1D7BD2" plain size="mini" id="{{item._id}}" data-fault="{{item.fault}}"
+          bind:click="onPass_1">通过</van-button>
+          <van-button round plain size="mini" type="danger"  id="{{item._id}}"
+          bind:click="onReject">拒绝</van-button>
+        </view>
+      </van-card>
+    </view>
+
+    <view wx:for="{{t_ser}}" wx:key="_id">
+      <van-card 
+        title="{{'故障：'+item.fault}}"
+        desc="{{'细节：'+item.fault_detial}}"
+        thumb="/images/fix/family_b.png">
+        <view slot="price-top">
+          <text decode="{{true}}" space="{{true}}">姓名：{{item.realName}}&emsp;工号：{{item.usernumber}}
+              手机号：{{item.phone}}
+              地址：{{item.build}}-{{item.buildN}}
+              预约时间：{{item.res_date}}-{{item.res_time}}
+          </text>   
+        </view>
+        <view slot="footer">
+          <van-button round color="#1D7BD2" plain size="mini" id="{{item._id}}" data-fault="{{item.fault}}"
+          bind:click="onPass_2">通过</van-button>
+          <van-button round plain size="mini" type="danger" id="{{item._id}}"
+          bind:click="onReject">拒绝</van-button>
+        </view>
+      </van-card>
+    </view>
+
+    <view wx:for="{{jxl_ser}}" wx:key="_id">
+      <van-card 
+        title="{{'故障：'+item.fault}}"
+        desc="{{'细节：'+item.fault_detial}}"
+        thumb="/images/fix/teaching_b.png">
+        <view slot="price-top">
+          <text decode="{{true}}" space="{{true}}">姓名：{{item.realName}}&emsp;学/工号：{{item.usernumber}}
+              手机号：{{item.phone}}
+              地址：{{item.build}}
+              预约时间：{{item.res_date}}-{{item.res_time}}
+          </text>   
+        </view>
+        <view slot="footer">
+          <van-button round color="#1D7BD2" plain size="mini" id="{{item._id}}" data-fault="{{item.fault}}"
+          bind:click="onPass_3">通过</van-button>
+          <van-button round plain size="mini" type="danger" id="{{item._id}}"
+          bind:click="onReject">拒绝</van-button>
+        </view>
+      </van-card>
+    </view>
+
+    <view wx:for="{{bgl_ser}}" wx:key="_id">
+      <van-card 
+        title="{{'故障：'+item.fault}}"
+        desc="{{'细节：'+item.fault_detial}}"
+        thumb="/images/fix/work_b.png">
+        <view slot="price-top">
+          <text decode="{{true}}" space="{{true}}">姓名：{{item.realName}}&emsp;工号：{{item.usernumber}}
+              手机号：{{item.phone}}
+              地址：{{item.build}}
+              预约时间：{{item.res_date}}-{{item.res_time}}
+          </text>   
+        </view>
+        <view slot="footer">
+          <van-button round color="#1D7BD2" plain size="mini" id="{{item._id}}" data-fault="{{item.fault}}"
+          bind:click="onPass_4">通过</van-button>
+          <van-button round plain size="mini" type="danger" id="{{item._id}}"
+          bind:click="onReject">拒绝</van-button>
+        </view>
+      </van-card>
+    </view>
+
+    <view wx:for="{{qt_ser}}" wx:key="_id">
+      <van-card 
+        title="{{'故障：'+item.fault}}"
+        desc="{{'细节：'+item.fault_detial}}"
+        thumb="/images/fix/building.png">
+        <view slot="price-top">
+          <text decode="{{true}}" space="{{true}}">姓名：{{item.realName}}&emsp;学/工号：{{item.usernumber}}
+              手机号：{{item.phone}}
+              地址：{{item.build}}
+              预约时间：{{item.res_date}}-{{item.res_time}}
+          </text>   
+        </view>
+        <view slot="footer">
+          <van-button round color="#1D7BD2" plain size="mini" id="{{item._id}}" data-fault="{{item.fault}}"
+          bind:click="onPass_5">通过</van-button>
+          <van-button round plain size="mini" type="danger" id="{{item._id}}"
+          bind:click="onReject">拒绝</van-button>
+        </view>
+      </van-card>
+    </view>
+
+</van-tab>
+<van-tab wx:else disabled="true" title="维修项目审核"/>
+</view>
+
+<!--维修人员管理签页-->
+<view>
+  <van-tab wx:if="{{ u_id == 'W_manager' || u_id == 'worker'}}" 
+  title="维修人员管理">
+   <van-cell-group>
+      <van-cell icon="/images/worker/water.png" title="水管工" 
+      is-link bind:click="tap_6"/>
+      <van-cell icon="/images/worker/electric.png" title="电工" 
+      is-link bind:click="tap_7" />
+      <van-cell icon="/images/worker/wood.png" title="木工" 
+      is-link bind:click="tap_8" />
+      <van-cell icon="/images/worker/other.png" title="其他" 
+      is-link bind:click="tap_9" />
+    </van-cell-group> 
+  </van-tab>
+  <van-tab wx:else disabled="true" title="维修人员管理"/>
+</view>
+
+</van-tabs>
+
+<!--拒绝按钮弹窗-->
+<van-popup show="{{ show_1 }}" position="bottom" custom-style="height: 30%" bind:close="onClose_1" > 
+
+<van-cell-group>
+  <van-field
+    label="拒绝缘由："
+    type="textarea"
+    clearable
+    value="{{ reject_r }}"
+    autosize="{{true}}"
+    border="{{ false }}"
+    bind:change="onChange_1"/>
+  <van-button block color="#1D7BD2" bind:click="onConform_1" >确认 </van-button>
+<van-button block type="default" bind:click="onClose_1">取消</van-button>
+</van-cell-group>
+
+</van-popup>
+
+<!--通过按钮弹窗-->
+
+<van-popup show="{{ show_2 }}" position="bottom" custom-style="height: 40%" bind:close="onClose_2" > 
+
+<van-picker 
+    columns="{{ columns_2 }}" 
+    bind:change="onChange_2" 
+    show-toolbar
+    title="选择工人"
+    bind:confirm="onConfirm_2"
+    bind:cancel="onCancel_2"
+    />
+
+</van-popup>

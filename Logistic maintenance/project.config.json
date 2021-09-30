@@ -1,0 +1,199 @@
+{
+  "description": "项目配置文件",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
+      }
+    ],
+    "minifyWXSS": true,
+    "showES6CompileOption": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.19.2",
+  "appid": "wx804c3b46bb1aeb7f",
+  "projectname": "Logistic%20maintenance",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "scripts": {},
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 1,
+          "name": "后勤维修",
+          "pathName": "pages/Houqinweixiu/HouqinWX",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "index",
+          "pathName": "pages/index/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "susheWx",
+          "pathName": "pages/susheWx/susheWx",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "kefu ",
+          "pathName": "pages/kefu/kefu",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "个人",
+          "pathName": "pages/personalPage/personalPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "登陆",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "绿化",
+          "pathName": "pages/lvhua/lvhua",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "回复",
+          "pathName": "pages/backM/backM",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "学生留言",
+          "pathName": "pages/studentM/studentM",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "公告",
+          "pathName": "pages/gonggao/gonggao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "家属院",
+          "pathName": "pages/teacherBuild/teacherBuild",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "教学楼",
+          "pathName": "pages/JXbuild/JXbuild",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "其他建筑",
+          "pathName": "pages/QTbuild/QTbuid",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "进度",
+          "pathName": "pages/jindu/jindu",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "个人界面公告",
+          "pathName": "pages/my_gg/mygg",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "水管工",
+          "pathName": "pages/water/water",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "工人维修单",
+          "pathName": "pages/my_wx/my_wx",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "数据",
+          "pathName": "pages/shuju/shuju",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+ "component": true,
+ "usingComponents": {
+   "van-toast": "@vant/weapp/toast/index"
+  },
+"navigationBarBackgroundColor": "#1D7BD2",
+"navigationBarTitleText": "首页",
+"navigationBarTextStyle": "white"
+}

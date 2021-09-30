@@ -1,0 +1,16 @@
+<van-toast id="van-toast"/>
+
+<van-nav-bar
+  title="历年绿化计划"
+/>
+
+  <van-button 
+  color="#1D7BD2" 
+  plain
+  round
+  bind:click="upload_File">点击上传文件</van-button>
+
+
+
+
+  

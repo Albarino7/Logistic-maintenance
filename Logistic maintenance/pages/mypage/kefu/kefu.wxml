@@ -1,0 +1,16 @@
+<!--pages/kefu/kefu.wxml-->
+<swiper indicator-dots="true" autoplay="true" interval="3000" duration="400" circular="true">
+  <block wx:for="{{imgUrls}}" wx:key="i">
+    <swiper-item>
+      <image src="{{item}}" style="width:100%;height:100%;" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='kefu-text'>
+  <text>1、若您的问题文字描述不清楚</text>
+  <text>2、若您的线上报修失败</text>
+  <text>我们将24小时为您服务</text>
+    <view class='phone' bindtap="callContact" data-phonenumber="123456">
+    <text>拨打电话：123456</text></view> 
+</view>

@@ -1,0 +1,9 @@
+{
+    "component": true,
+    "usingComponents": {
+      "van-dialog": "@vant/weapp/dialog/index"
+    },
+    "navigationBarBackgroundColor": "#1D7BD2",
+    "navigationBarTitleText": "客服",
+    "navigationBarTextStyle": "white"
+}

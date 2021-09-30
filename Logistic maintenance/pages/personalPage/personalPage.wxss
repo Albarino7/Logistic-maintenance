@@ -1,0 +1,81 @@
+.user_info{
+  background-color: #fff;
+  margin-top: 15rpx;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 2px 5px #eeeeee;
+}
+
+.userinfo {
+  width: 750rpx;
+  height: 200rpx;
+  font-size: 33rpx;
+  color: #818A8F;
+  
+}
+ 
+.userinfo-avatar {
+  overflow:hidden;
+  display: inline-block;
+  width: 140rpx;
+  height: 140rpx;
+  margin: 16rpx;
+  position: relative;
+  top: 10rpx;
+  left: 8rpx;
+  border-radius: 50%;
+  border: 1px solid #1D7BD2;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.name{
+position: absolute;
+color: #6d6d6d;
+top: 70rpx;
+left: 190rpx;
+
+}
+
+.user_info .userinfo .edit{
+  font-size: 32rpx;
+  line-height: 34rpx;
+  position: absolute;
+  top: 125rpx;
+  left: 190rpx; 
+  color: #818A8F; 
+}
+
+.my{
+  margin: 15rpx 0 0 0;
+  border-top: solid 1px #ebebeb;
+  border-bottom: solid 2px #ebebeb;
+}
+.my .my-item{
+  width: 750rpx;
+  background: #ffffff;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+.my .my-item .myitem-icon{
+  flex: 1;
+}
+.my .my-item .myitem-icon image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 37.5rpx 0;
+  margin-top: 5rpx;
+  margin-left: 36rpx;
+}
+.my .my-item .myitem-name{
+  flex: 5;
+  text-align: left;
+  font-size: 34rpx;
+  color: #6d6d6d;
+  line-height: 60rpx;
+  padding-top: 35rpx;
+  border-bottom: solid 1px #ebebeb;
+}
+.my .my-item:last-child .myitem-name{
+  border-bottom: none;
+}
